@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Casarrubia | Portafolio personal</title>
+  <meta name="description" content="Portafolio personal de Kevin Casarrubia: formación en desarrollo de software, proyectos académicos, tecnología y creatividad.">
+  <meta name="theme-color" content="#0b1020">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    :root{--background-color:#0b1020;--default-color:#c9c9d6;--heading-color:#f4f2ff;--accent-color:#9b8cff;--surface-color:#151c31;--contrast-color:#fff;--muted:#9999ad}
+    html{scroll-behavior:smooth} body{background:var(--background-color);color:var(--default-color);font-family:'DM Sans',sans-serif;line-height:1.72}
+    h1,h2,h3,h4,h5{font-family:Manrope,sans-serif;color:var(--heading-color)}
+    .header{background:#080d19!important;border-right:1px solid rgba(255,255,255,.06);padding:26px 18px}
+    .profile-img img{width:122px;height:122px;object-fit:cover;object-position:center 22%;border:3px solid var(--accent-color);box-shadow:0 0 0 7px rgba(155,140,255,.10)}
+    .logo .sitename{font-size:21px;font-weight:800;letter-spacing:-.5px;margin:12px 0 5px}
+    .social-links{color:var(--muted);font-size:12px;letter-spacing:2px;text-transform:uppercase}
+    .navmenu a{font-size:14px;color:#c3c3d1;padding:13px 12px;margin:3px 0;border-radius:10px;transition:.2s}
+    .navmenu a:hover,.navmenu .active{color:#fff!important;background:rgba(155,140,255,.12)}.navmenu .navicon{color:var(--accent-color);font-size:17px}
+    .main{background:var(--background-color)}.section{background:transparent;padding:84px 0;scroll-margin-top:20px}
+    .hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;padding:80px 0;background:#0a1020}
+    .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:brightness(.32) saturate(.82)}
+    .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,13,25,.96) 0%,rgba(8,13,25,.76) 46%,rgba(8,13,25,.25) 100%),linear-gradient(0deg,#0b1020 0%,transparent 30%)}
+    .hero .container{position:relative;z-index:2}.eyebrow{color:#b7acff;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}.eyebrow:before{content:'';width:25px;height:1px;background:var(--accent-color)}
+    .hero h2{font-size:clamp(48px,7vw,82px);font-weight:800;letter-spacing:-4px;line-height:1.04;margin:20px 0 18px}.hero .lead{font-size:clamp(17px,2vw,21px);color:#dedbea;max-width:560px}.hero .hero-note{font-size:14px;color:#b9b8c9;max-width:540px}
+    .btn-main{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;background:var(--accent-color);color:#101326;text-decoration:none;font-weight:700;transition:.2s}.btn-main:hover{background:#b7acff;color:#101326;transform:translateY(-2px)}
+    .section-title{text-align:left;padding-bottom:28px}.section-title h2{font-size:32px;font-weight:800;letter-spacing:-1px;margin-bottom:12px}.section-title h2:after{content:'';display:block;width:42px;height:3px;background:var(--accent-color);margin-top:14px;border-radius:3px}.section-title p{color:var(--muted);max-width:680px;margin:0}
+    .about-photo{width:100%;height:440px;object-fit:cover;object-position:center 18%;border-radius:18px;border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+    .about-copy h3{font-size:24px;font-weight:800;margin:0 0 14px}.about-copy p{color:#bfc0ce}.about-copy .intro{font-size:17px;color:#e2deef}
+    .fact{display:flex;gap:12px;align-items:flex-start;margin:14px 0}.fact i{color:var(--accent-color);font-size:18px;margin-top:3px}.fact strong{color:#fff;display:block;font-size:13px}.fact span{color:var(--muted);font-size:14px}
+    .soft-card,.project-card,.interest-card,.timeline-card{background:linear-gradient(145deg,#171e34,#11182b);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;height:100%;transition:.25s}.soft-card:hover,.project-card:hover,.interest-card:hover{transform:translateY(-5px);border-color:rgba(155,140,255,.45)}
+    .skill-chip{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(155,140,255,.28);background:rgba(155,140,255,.08);color:#e4e0ff;border-radius:999px;padding:9px 14px;margin:5px 5px 5px 0;font-size:13px}.skill-chip i{color:var(--accent-color)}
+    .project-card .project-icon,.interest-card .project-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:13px;background:rgba(155,140,255,.13);color:#b9adff;font-size:23px;margin-bottom:18px}.project-card h3,.interest-card h3{font-size:19px;font-weight:800;margin-bottom:10px}.project-card p,.interest-card p{color:#b6b7c6;font-size:14px;margin:0}.tag{display:inline-block;font-size:11px;border-radius:20px;padding:5px 10px;background:rgba(255,255,255,.07);color:#d6d1ef;margin:14px 5px 0 0}
+    .step{position:relative;padding:0 0 24px 28px;border-left:1px solid rgba(155,140,255,.45)}.step:before{content:'';position:absolute;left:-6px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--accent-color);box-shadow:0 0 0 5px rgba(155,140,255,.12)}.step h3{font-size:17px;font-weight:800}.step p{font-size:14px;color:#b6b7c6;margin:5px 0 0}.step small{color:#b9acff;text-transform:uppercase;letter-spacing:1.2px;font-size:10px;font-weight:700}
+    .gallery-img{width:100%;height:330px;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.08);transition:.25s}.gallery-link{display:block;overflow:hidden;border-radius:16px}.gallery-link:hover .gallery-img{transform:scale(1.025)}.gallery-caption{font-size:12px;color:var(--muted);margin-top:10px}
+    .closing-card{padding:34px;border-radius:18px;background:linear-gradient(125deg,rgba(155,140,255,.16),rgba(21,28,49,.9));border:1px solid rgba(155,140,255,.2)}.closing-card h3{font-weight:800}.closing-card p{color:#c2c1d0;margin-bottom:0}
+    .footer{background:#080d19;color:#8d8da1;padding:25px 0;font-size:13px}.footer strong{color:#e5e2f3}
+    .scroll-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:var(--accent-color);color:#101326;text-decoration:none;font-size:20px;opacity:0;visibility:hidden;z-index:999;transition:.25s}.scroll-top.active{opacity:1;visibility:visible}.scroll-top:hover{background:#b7acff;color:#101326}
+    @media(max-width:1199px){.hero{min-height:780px}.hero h2{letter-spacing:-2.5px}}
+    @media(max-width:767px){.section{padding:65px 0}.hero{min-height:720px}.hero>img{object-position:58% center}.hero:after{background:linear-gradient(90deg,rgba(8,13,25,.92),rgba(8,13,25,.58)),linear-gradient(0deg,#0b1020 0%,transparent 36%)}.hero h2{font-size:52px;letter-spacing:-2px}.about-photo{height:390px}.gallery-img{height:270px}.section-title h2{font-size:28px}}
+  </style>
+</head>
+<body class="index-page">
+<header id="header" class="header dark-background d-flex flex-column">
+  <i class="header-toggle d-xl-none bi bi-list"></i>
+  <div class="profile-img"><img src="assets/img/kevin-foto-1.png" alt="Foto de Kevin Casarrubia" class="img-fluid rounded-circle"></div>
+  <a href="#hero" class="logo d-flex align-items-center justify-content-center"><h1 class="sitename">Kevin Casarrubia</h1></a>
+  <div class="social-links text-center">Portafolio personal</div>
+  <nav id="navmenu" class="navmenu"><ul>
+    <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i> Inicio</a></li>
+    <li><a href="#about"><i class="bi bi-person navicon"></i> Sobre mí</a></li>
+    <li><a href="#skills"><i class="bi bi-code-slash navicon"></i> Habilidades</a></li>
+    <li><a href="#projects"><i class="bi bi-grid navicon"></i> Proyectos</a></li>
+    <li><a href="#journey"><i class="bi bi-journal-check navicon"></i> Mi proceso</a></li>
+    <li><a href="#interests"><i class="bi bi-stars navicon"></i> Intereses</a></li>
+    <li><a href="#photos"><i class="bi bi-camera navicon"></i> Mis fotos</a></li>
+  </ul></nav>
+</header>
+<main class="main">
+<section id="hero" class="hero section dark-background">
+  <img src="assets/img/kevin-foto-1.png" alt="Kevin Casarrubia en primer plano" data-aos="fade-in">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <span class="eyebrow">Mi espacio digital</span>
+    <h2>Kevin<br>Casarrubia<span style="color:#a99cff">.</span></h2>
+    <p class="lead">Estudiante de desarrollo de software, con interés en la tecnología, el diseño visual y la creatividad.</p>
+    <p class="hero-note mt-3">Estoy aprendiendo a convertir ideas en proyectos digitales: paso a paso, practicando, probando y mejorando cada detalle.</p>
+    <a class="btn-main mt-3" href="#about">Conóceme <i class="bi bi-arrow-down"></i></a>
+  </div>
+</section>
+<section id="about" class="about section">
+  <div class="container section-title" data-aos="fade-up"><span class="eyebrow">Un poco de mi historia</span><h2>Sobre mí</h2><p>Quién soy, qué me interesa y cómo estoy construyendo mi camino en el mundo del desarrollo.</p></div>
+  <div class="container" data-aos="fade-up" data-aos-delay="100"><div class="row gy-4 align-items-center">
+    <div class="col-lg-5"><img src="assets/img/kevin-foto-2.png" class="about-photo" alt="Kevin sentado en un banco, en una fotografía al aire libre"></div>
+    <div class="col-lg-7 about-copy"><h3>Aprender, crear y darle forma a las ideas.</h3>
+      <p class="intro">Soy Kevin Casarrubia. Actualmente estoy en formación en desarrollo de software y disfruto aprender cómo se construyen las páginas, las aplicaciones y las experiencias digitales.</p>
+      <p>Me gusta combinar la parte técnica con la visual: que un proyecto funcione, tenga una estructura clara y también se vea bien. En mis prácticas he trabajado con HTML, CSS, Flexbox y Java, fortaleciendo poco a poco mis bases de programación.</p>
+      <p>Me identifico con una forma de aprender muy práctica: hacer, revisar, corregir y volver a intentar. Cada proyecto me ayuda a entender mejor la tecnología y a descubrir nuevas formas de resolver problemas.</p>
+      <div class="row mt-4"><div class="col-sm-6"><div class="fact"><i class="bi bi-person-badge"></i><div><strong>Nombre</strong><span>Kevin Casarrubia</span></div></div></div><div class="col-sm-6"><div class="fact"><i class="bi bi-laptop"></i><div><strong>Área de formación</strong><span>Desarrollo de software</span></div></div></div><div class="col-sm-6"><div class="fact"><i class="bi bi-geo-alt"></i><div><strong>Ciudad</strong><span>Medellín, Colombia</span></div></div></div><div class="col-sm-6"><div class="fact"><i class="bi bi-lightbulb"></i><div><strong>Enfoque</strong><span>Tecnología + creatividad</span></div></div></div></div>
+    </div>
+  </div></div>
+</section>
+<section id="skills" class="skills section">
+  <div class="container section-title" data-aos="fade-up"><span class="eyebrow">Lo que estoy aprendiendo</span><h2>Habilidades y herramientas</h2><p>Conocimientos que he practicado en actividades académicas y proyectos personales. Los presento como áreas en formación, no como certificaciones.</p></div>
+  <div class="container"><div class="row gy-4">
+    <div class="col-lg-6" data-aos="fade-up"><div class="soft-card"><h3 class="h5 fw-bold mb-3"><i class="bi bi-code-slash me-2" style="color:#a99cff"></i>Desarrollo web</h3><div><span class="skill-chip"><i class="bi bi-filetype-html"></i>HTML</span><span class="skill-chip"><i class="bi bi-filetype-css"></i>CSS</span><span class="skill-chip"><i class="bi bi-layout-wtf"></i>Flexbox</span><span class="skill-chip"><i class="bi bi-phone"></i>Diseño adaptable</span><span class="skill-chip"><i class="bi bi-window"></i>Estructura de páginas</span></div><p class="small mt-3 mb-0" style="color:#a7a8b8">Maquetación, navegación, tarjetas, estilos y organización visual de interfaces.</p></div></div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"><div class="soft-card"><h3 class="h5 fw-bold mb-3"><i class="bi bi-braces me-2" style="color:#a99cff"></i>Programación</h3><div><span class="skill-chip"><i class="bi bi-cup-hot"></i>Java</span><span class="skill-chip"><i class="bi bi-box"></i>Paquetes</span><span class="skill-chip"><i class="bi bi-diagram-3"></i>Lógica</span><span class="skill-chip"><i class="bi bi-code-square"></i>IntelliJ IDEA</span></div><p class="small mt-3 mb-0" style="color:#a7a8b8">Prácticas de fundamentos de programación y organización de código. En clase se trabaja con Java 20.</p></div></div>
+    <div class="col-lg-6" data-aos="fade-up"><div class="soft-card"><h3 class="h5 fw-bold mb-3"><i class="bi bi-palette me-2" style="color:#a99cff"></i>Diseño y presentación</h3><div><span class="skill-chip"><i class="bi bi-grid"></i>Composición visual</span><span class="skill-chip"><i class="bi bi-type"></i>Tipografía</span><span class="skill-chip"><i class="bi bi-columns-gap"></i>Distribución</span></div><p class="small mt-3 mb-0" style="color:#a7a8b8">Interés por las interfaces limpias, la presentación ordenada y los pequeños detalles.</p></div></div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"><div class="soft-card"><h3 class="h5 fw-bold mb-3"><i class="bi bi-stars me-2" style="color:#a99cff"></i>Mi manera de trabajar</h3><div><span class="skill-chip"><i class="bi bi-search"></i>Curiosidad</span><span class="skill-chip"><i class="bi bi-pencil"></i>Atención al detalle</span><span class="skill-chip"><i class="bi bi-arrow-repeat"></i>Mejora continua</span></div><p class="small mt-3 mb-0" style="color:#a7a8b8">Me gusta entender los pasos, experimentar y pulir los resultados hasta sentir que tienen sentido.</p></div></div>
+  </div></div>
+</section>
+<section id="projects" class="portfolio section">
+  <div class="container section-title" data-aos="fade-up"><span class="eyebrow">Práctica que se convierte en experiencia</span><h2>Mis proyectos</h2><p>Trabajos y ejercicios que muestran lo que he venido aprendiendo. Son parte de mi proceso académico y de construcción de experiencia.</p></div>
+  <div class="container"><div class="row gy-4">
+    <div class="col-lg-6" data-aos="fade-up"><article class="project-card"><div class="project-icon"><i class="bi bi-cart-check"></i></div><h3>FitPlanSportCare</h3><p>Proyecto integrador de una tienda web enfocada en el deporte y el cuidado personal. He trabajado en la experiencia de navegación, presentación de productos y funcionamiento del carrito de compras.</p><span class="tag">Tienda web</span><span class="tag">Catálogo</span><span class="tag">Carrito de compras</span><span class="tag">Proyecto académico</span></article></div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"><article class="project-card"><div class="project-icon"><i class="bi bi-window-stack"></i></div><h3>Prácticas de HTML y CSS</h3><p>Ejercicios de construcción de páginas con navegación, tarjetas, secciones de contenido, bordes redondeados y distribución con Flexbox. También he practicado diferencias entre estructura HTML y presentación con CSS.</p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Flexbox</span><span class="tag">Interfaces</span></article></div>
+    <div class="col-lg-6" data-aos="fade-up"><article class="project-card"><div class="project-icon"><i class="bi bi-cup-hot"></i></div><h3>Fundamentos de Java</h3><p>Prácticas iniciales de programación, creación de paquetes y organización de proyectos en IntelliJ IDEA, siguiendo los requisitos de versión establecidos en clase.</p><span class="tag">Java 20</span><span class="tag">IntelliJ IDEA</span><span class="tag">Programación</span></article></div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"><article class="project-card"><div class="project-icon"><i class="bi bi-person-video3"></i></div><h3>Este portafolio</h3><p>Una página personal para reunir mi presentación, conocimientos, intereses y proyectos en un solo lugar. También es una práctica de diseño web y organización de contenido.</p><span class="tag">Diseño web</span><span class="tag">Presentación</span><span class="tag">Desarrollo personal</span></article></div>
+  </div></div>
+</section>
+<section id="journey" class="resume section">
+  <div class="container section-title" data-aos="fade-up"><span class="eyebrow">Paso a paso</span><h2>Mi proceso de aprendizaje</h2><p>No se trata solo de aprender herramientas: también de entender cómo usarlas para crear algo funcional.</p></div>
+  <div class="container"><div class="row gy-4">
+    <div class="col-lg-6" data-aos="fade-up"><div class="timeline-card"><h3 class="h5 fw-bold mb-4">Lo que he venido practicando</h3><div class="step"><small>Desarrollo web</small><h3>Construcción de páginas</h3><p>Organización de contenido con HTML y estilos con CSS para crear secciones, menús, tarjetas y diseños más claros.</p></div><div class="step"><small>Diseño de interfaces</small><h3>Distribución y Flexbox</h3><p>Práctica de alineación, separación, dirección de elementos, bordes y adaptación de componentes.</p></div><div class="step" style="border-left:0;padding-bottom:0"><small>Programación</small><h3>Fundamentos de Java</h3><p>Creación de paquetes, estructura de proyectos y primeros pasos para desarrollar lógica de programación.</p></div></div></div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"><div class="timeline-card"><h3 class="h5 fw-bold mb-4">Hacia dónde quiero avanzar</h3><div class="step"><small>Próximo paso</small><h3>Fortalecer mis bases</h3><p>Seguir practicando lógica, Java, HTML y CSS para ganar seguridad y comprender mejor cada herramienta.</p></div><div class="step"><small>Crear más</small><h3>Desarrollar proyectos completos</h3><p>Pasar de ejercicios a soluciones con una estructura clara, una buena experiencia de usuario y funcionalidades útiles.</p></div><div class="step" style="border-left:0;padding-bottom:0"><small>Meta personal</small><h3>Unir tecnología y creatividad</h3><p>Construir un estilo propio como desarrollador, sin dejar de explorar ideas, diseño y nuevas herramientas.</p></div></div></div>
+  </div></div>
+</section>
+<section id="interests" class="services section">
+  <div class="container section-title" data-aos="fade-up"><span class="eyebrow">Lo que me inspira</span><h2>Mis intereses</h2><p>Además de estudiar tecnología, hay otras cosas que alimentan mi curiosidad y mi forma de expresarme.</p></div>
+  <div class="container"><div class="row gy-4">
+    <div class="col-md-4" data-aos="fade-up"><div class="interest-card"><div class="project-icon"><i class="bi bi-palette"></i></div><h3>Diseño y estética visual</h3><p>Me atraen las combinaciones de colores, la fotografía, los estilos visuales y las páginas que transmiten personalidad sin verse recargadas.</p></div></div>
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><div class="interest-card"><div class="project-icon"><i class="bi bi-controller"></i></div><h3>Videojuegos</h3><p>Disfruto los videojuegos, especialmente Mobile Legends. Me interesa su mezcla de estrategia, personajes, habilidades y diseño.</p></div></div>
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200"><div class="interest-card"><div class="project-icon"><i class="bi bi-music-note-beamed"></i></div><h3>Música y cultura pop</h3><p>Me gusta descubrir canciones, artistas y propuestas visuales que conecten con mi gusto y mi estado de ánimo.</p></div></div>
+  </div></div>
+</section>
+<section id="photos" class="section">
+  <div class="container section-title" data-aos="fade-up"><span class="eyebrow">Un toque personal</span><h2>Mis fotografías</h2><p>Esta página utiliza únicamente las dos fotografías que compartí para mi portafolio.</p></div>
+  <div class="container"><div class="row gy-4"><div class="col-md-6" data-aos="fade-up"><a href="assets/img/kevin-foto-1.png" class="gallery-link glightbox"><img src="assets/img/kevin-foto-1.png" class="gallery-img" alt="Foto 1 de Kevin Casarrubia"></a><p class="gallery-caption">Foto 1 · Retrato de primer plano</p></div><div class="col-md-6" data-aos="fade-up" data-aos-delay="100"><a href="assets/img/kevin-foto-2.png" class="gallery-link glightbox"><img src="assets/img/kevin-foto-2.png" class="gallery-img" alt="Foto 2 de Kevin Casarrubia"></a><p class="gallery-caption">Foto 2 · Fotografía sentado</p></div></div></div>
+</section>
+<section class="section pt-0"><div class="container"><div class="closing-card" data-aos="fade-up"><span class="eyebrow">En construcción, como todo buen comienzo</span><h3 class="mt-3">Este es mi camino y apenas estoy empezando.</h3><p>Quiero seguir aprendiendo, crear proyectos de los que me sienta orgulloso y convertir cada nuevo reto en una oportunidad para mejorar.</p></div></div></section>
+</main>
+<a href="#hero" class="scroll-top" aria-label="Volver al inicio"><i class="bi bi-arrow-up"></i></a>
+<footer id="footer" class="footer"><div class="container text-center"><p class="mb-1">© 2026 <strong>Kevin Casarrubia</strong>. Portafolio personal.</p><p class="mb-0">Hecho con dedicación, práctica y curiosidad.</p></div></footer>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

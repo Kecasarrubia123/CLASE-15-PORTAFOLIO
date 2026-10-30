@@ -1,0 +1,11 @@
+PORTAFOLIO PERSONAL - KEVIN CASARRUBIA
+
+COMO VERLO
+1. Descomprime este archivo ZIP.
+2. Abre la carpeta Kevin_Casarrubia_Portafolio.
+3. Haz doble clic en index.html para verlo en Google Chrome, Edge o Firefox.
+
+El sitio utiliza únicamente las dos fotografías personales entregadas para este portafolio (kevin-foto-1.png y kevin-foto-2.png). Los estilos, iconos y componentes de la plantilla se conservan dentro de assets/vendor para que la página funcione localmente.
+
+NOTA
+El contenido presenta formación y prácticas académicas; no declara experiencia laboral ni certificaciones que no hayan sido indicadas.
